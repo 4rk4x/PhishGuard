@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-11-11T06:27:54.852499+00:00",
+  "evaluation_scope": "Synthetic group-held-out benchmark. Not independent real-world validation.",
+  "split_strategy": {
+    "method": "StratifiedGroupKFold",
+    "number_of_candidate_folds": 5,
+    "target_test_ratio": 0.2,
+    "actual_test_ratio": 0.1926,
+    "random_state": 42,
+    "group_column": "group_id",
+    "train_test_group_overlap": 0
+  },
+  "dataset": {
+    "name": "PhishGuard Synthetic URL Benchmark",
+    "license": "Not separately licensed",
+    "citation": "No external dataset records are directly imported. The benchmark is generated using project-defined URL patterns.",
+    "total_samples": 1355,
+    "train_samples": 1094,
+    "test_samples": 261,
+    "total_groups": 117,
+    "train_groups": 104,
+    "test_groups": 13,
+    "benign_count": 710,
+    "phishing_count": 645,
+    "train_benign_count": 568,
+    "train_phishing_count": 526,
+    "test_benign_count": 142,
+    "test_phishing_count": 119
+  },
+  "selected_model": "Random Forest Classifier",
+  "models": {
+    "random_forest": {
+      "name": "Random Forest Classifier",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "criterion": "gini",
+        "min_samples_split": 4,
+        "class_weight": "balanced",
+        "random_state": 42
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            142,
+            0
+          ],
+          [
+            0,
+            119
+          ]
+        ]
+      }
+    },
+    "logistic_regression": {
+      "name": "Logistic Regression (L2 Regularized)",
+      "hyperparameters": {
+        "max_iter": 1000,
+        "C": 1.0,
+        "penalty": "l2",
+        "random_state": 42
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            142,
+            0
+          ],
+          [
+            0,
+            119
+          ]
+        ]
+      }
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "is_https",
+      "importance": 0.248,
+      "percentage": 24.8
+    },
+    {
+      "feature": "suspicious_words_count",
+      "importance": 0.1982,
+      "percentage": 19.82
+    },
+    {
+      "feature": "prefix_suffix_hyphen",
+      "importance": 0.1542,
+      "percentage": 15.42
+    },
+    {
+      "feature": "count_hyphens",
+      "importance": 0.1194,
+      "percentage": 11.94
+    },
+    {
+      "feature": "shannon_entropy",
+      "importance": 0.0682,
+      "percentage": 6.82
+    },
+    {
+      "feature": "num_query_params",
+      "importance": 0.0494,
+      "percentage": 4.94
+    },
+    {
+      "feature": "url_length",
+      "importance": 0.0478,
+      "percentage": 4.78
+    },
+    {
+      "feature": "path_length",
+      "importance": 0.0255,
+      "percentage": 2.55
+    },
+    {
+      "feature": "count_digits",
+      "importance": 0.0232,
+      "percentage": 2.32
+    },
+    {
+      "feature": "digit_ratio",
+      "importance": 0.0167,
+      "percentage": 1.67
+    },
+    {
+      "feature": "having_ip_address",
+      "importance": 0.0138,
+      "percentage": 1.38
+    },
+    {
+      "feature": "num_subdomains",
+      "importance": 0.0095,
+      "percentage": 0.95
+    },
+    {
+      "feature": "count_dots",
+      "importance": 0.0095,
+      "percentage": 0.95
+    },
+    {
+      "feature": "tld_in_subdomain",
+      "importance": 0.009,
+      "percentage": 0.9
+    },
+    {
+      "feature": "count_question",
+      "importance": 0.0041,
+      "percentage": 0.41
+    },
+    {
+      "feature": "is_shortened",
+      "importance": 0.0029,
+      "percentage": 0.29
+    },
+    {
+      "feature": "having_at_symbol",
+      "importance": 0.0004,
+      "percentage": 0.04
+    },
+    {
+      "feature": "count_at",
+      "importance": 0.0002,
+      "percentage": 0.02
+    },
+    {
+      "feature": "double_slash_redirect",
+      "importance": 0.0,
+      "percentage": 0.0
+    },
+    {
+      "feature": "count_percent",
+      "importance": 0.0,
+      "percentage": 0.0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "dataset_name": "PhishGuard Synthetic URL Benchmark",
+  "version": "1.1.0",
+  "license": "Not separately licensed",
+  "citation": "No external dataset records are directly imported. The benchmark is generated using project-defined URL patterns.",
+  "description": "A project-generated synthetic benchmark containing benign and phishing-like URL patterns for academic experimentation. The dataset is not a verified real-world phishing or benign URL collection.",
+  "data_type": "Synthetic",
+  "external_data_imported": false,
+  "generation_method": "Manually defined URL patterns and template-based expansion",
+  "grouping_method": "Benign examples are grouped by normalized hostname. Phishing examples are grouped by detected brand or attack-pattern host.",
+  "target_column": "label",
+  "group_column": "group_id",
+  "classes": {
+    "0": "Legitimate / Benign (synthetic examples)",
+    "1": "Malicious / Phishing (synthetic examples)"
+  },
+  "feature_count": 20,
+  "created_at": "2026-03-01T00:00:00Z",
+  "total_samples": 1355,
+  "benign_samples": 710,
+  "phishing_samples": 645,
+  "total_groups": 117
+}

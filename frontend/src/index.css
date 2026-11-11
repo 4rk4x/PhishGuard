@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #101827;
+    color: #F8FAFC;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Custom cyber scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0F1D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24344D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #27D17F;
+}
+
+/* Clean cybersecurity utilities */
+.glow-electric {
+  box-shadow: 0 0 20px rgba(39, 209, 127, 0.2);
+}
+
+.glow-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cyber-grid-bg {
+  background-image: radial-gradient(rgba(39, 209, 127, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
